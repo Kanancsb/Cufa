@@ -1,0 +1,30 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+#criar-formulario-identificacao label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#criar-formulario-identificacao input,
+#criar-formulario-identificacao select{
+    font-size: 14px;
+}
+
+.btn-primary{
+    background-color: green;
+    font-weight: bold;
+    border: 2px rgb(3, 158, 3);
+}
+
+.btn-primary:hover{
+    background-color: rgb(3, 158, 3);
+    border-color: rgb(3, 158, 3);
+}
+
+#navbar{
+    justify-content: space-evenly;
+    background-color: #FFF;
+    padding: 5px 0;
+}
