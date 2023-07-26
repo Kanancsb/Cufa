@@ -9,5 +9,8 @@ class ComposicaoFamiliar extends Model
 {
     protected $table = 'composicaofamiliar';
 
-    use HasFactory;
+    public function formulario()
+    {
+        return $this->belongsTo(Formulario::class, 'cpf_entrevistado', 'cpf');
+    }
 }

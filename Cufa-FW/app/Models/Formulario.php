@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Formulario extends Model
 {
-    use HasFactory;
+    protected $table = 'formularios'; // Defina o nome da tabela se não estiver usando o padrão do Laravel
+
+    public function composicaoFamiliar()
+    {
+        return $this->hasMany(ComposicaoFamiliar::class, 'cpf_entrevistado', 'cpf');
+    }
 }
