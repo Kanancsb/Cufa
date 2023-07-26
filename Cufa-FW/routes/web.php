@@ -21,6 +21,9 @@ Route::get('/Noticias/CriarNoticia', [EventController::class, 'CriarNoticias']);
 
 Route::get('/Noticias/TodasNoticias', [EventController::class, 'TodasNoticias']);
 
+Route::get('/secundarios/Sobre', [EventController::class, 'Sobre']);
+Route::get('/secundarios/DoacaoInstitucional', [EventController::class, 'Doacoes']);
+
 Route::get('/Formularios/CompFamiliar', [EventController::class, 'FormularioFamiliar']) -> middleware('auth');
 Route::post('/Formularios', [EventController::class, 'SalvarDados']);
 

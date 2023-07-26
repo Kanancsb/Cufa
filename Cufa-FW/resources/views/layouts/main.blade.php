@@ -41,7 +41,7 @@
         </script>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
                         <img src="/img/Cufa.png" alt="">
@@ -51,13 +51,13 @@
                             <a href="/" class="nav-link">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Sobre</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="/Noticias/TodasNoticias" class="nav-link">Noticias</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Doação Institucional</a>
+                            <a href="/secundarios/Sobre" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/secundarios/DoacaoInstitucional" class="nav-link">Doação Institucional</a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">Contato</a>
@@ -86,7 +86,7 @@
         @yield('content')
 
         <footer>
-            <p>Cufa Frederico Westphalen &copy; 2023lul</p>
+            <p>Cufa Frederico Westphalen &copy; 2023</p>
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

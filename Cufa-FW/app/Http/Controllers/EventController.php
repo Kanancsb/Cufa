@@ -29,6 +29,14 @@ class EventController extends Controller
         return view('Formularios.CompFamiliar');
     }
 
+    public function Sobre(){
+        return view('/secundarios/Sobre');
+    }
+    
+    public function Doacoes(){
+        return view('/secundarios/DoacaoInstitucional');
+    }
+
 
     public function SalvarDados(Request $request){
         $entrevistado = new Formulario;
