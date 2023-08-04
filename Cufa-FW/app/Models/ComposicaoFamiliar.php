@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ComposicaoFamiliar extends Model
 {
-    protected $table = 'composicaofamiliar';
-
     use HasFactory;
+
+    protected $table = 'composicaofamiliar'; 
+
+    public function formulario(){
+        return $this->belongsTo(Formulario::class, 'cpf_entrevistado', 'cpf');
+    }
 }
