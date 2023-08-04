@@ -12,17 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('composicaofamiliar', function (Blueprint $table) {
-            $table->id(); // Adicione uma coluna de chave primária
-            $table->integer('cpf_entrevistado')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('cpf_entrevistado');
             $table->foreign('cpf_entrevistado')->references('cpf')->on('formularios');
             $table->string('nomeFamiliar');
-            $table->integer('parentesco_id')->unsigned();
+            $table->unsignedBigInteger('parentesco_id');
             $table->foreign('parentesco_id')->references('id')->on('parentesco');
             $table->date('dataNascimentoFamiliar');
             $table->float('rendaMensalBrutaFamiliar');
-            $table->integer('profissao_id')->unsigned();
+            $table->unsignedBigInteger('profissao_id');
             $table->foreign('profissao_id')->references('id')->on('profissao');
-            $table->integer('escolaridadeFamiliar')->unsigned();
+            $table->unsignedBigInteger('escolaridadeFamiliar');
             $table->foreign('escolaridadeFamiliar')->references('id')->on('escolaridade');
             $table->timestamps();
         });
