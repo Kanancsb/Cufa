@@ -66,11 +66,12 @@
                         <li class="nav-item">
                             <a href="/login" class="nav-link">Login</a>
                         </li>
-                        @endguest
-                        @auth
                         <li class="nav-item">
                             <a href="/Formularios/CompFamiliar" class="nav-link">Formulario</a>
                         </li>
+                        @endguest
+                        @auth
+                        
                         <li class="nav-item">
                             <form action="/logout" method="post">
                                 @csrf

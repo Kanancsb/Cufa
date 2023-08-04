@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('composicaofamiliar', function (Blueprint $table) {
             $table->integer('cpf_entrevistado');
             $table->foreign('cpf_entrevistado')->references('cpf')->on('formularios');
-            $table->timestamps();
             $table->string('nomeFamiliar');
             $table->integer('parentesco_id');
             $table->foreign('parentesco_id')->references('id')->on('parentesco');
