@@ -12,25 +12,25 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('formularios', function (Blueprint $table) {
-            $table->unsignedBigInteger('cpf')->primary();
+            $table->integer('cpf')->primary();
             $table->string('rg');
+            $table->timestamps();
             $table->string('nome');
             $table->string('sobrenome');
             $table->string('sexo');
             $table->string('estadoCivil');
             $table->date('dataNascimentoEntrevistado');
-            $table->unsignedBigInteger('escolaridadeEntrevistado');
+            $table->integer('escolaridadeEntrevistado');
             $table->foreign('escolaridadeEntrevistado')->references('id')->on('escolaridade');
             $table->string('naturalidade');
             $table->string('endereco');
             $table->string('bairro');
-            $table->unsignedBigInteger('nomeCidade');
+            $table->integer('nomeCidade');
             $table->foreign('nomeCidade')->references('id')->on('cidades');
-            $table->string('telefone');
-            $table->string('celular');
+            $table->integer('telefone');
+            $table->integer('celular');
             $table->string('email');
             $table->float('rendaMensalBrutaEntrevistado');
-            $table->timestamps();
         });
     }
 

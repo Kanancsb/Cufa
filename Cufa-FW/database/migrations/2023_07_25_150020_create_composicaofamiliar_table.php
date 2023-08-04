@@ -12,22 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('composicaofamiliar', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('cpf_entrevistado');
+            $table->integer('cpf_entrevistado');
             $table->foreign('cpf_entrevistado')->references('cpf')->on('formularios');
+            $table->timestamps();
             $table->string('nomeFamiliar');
-            $table->unsignedBigInteger('parentesco_id');
+            $table->integer('parentesco_id');
             $table->foreign('parentesco_id')->references('id')->on('parentesco');
             $table->date('dataNascimentoFamiliar');
             $table->float('rendaMensalBrutaFamiliar');
-            $table->unsignedBigInteger('profissao_id');
+            $table->integer('profissao_id')->unsigned();
             $table->foreign('profissao_id')->references('id')->on('profissao');
-            $table->unsignedBigInteger('escolaridadeFamiliar');
+            $table->integer('escolaridadeFamiliar')->unsigned();
             $table->foreign('escolaridadeFamiliar')->references('id')->on('escolaridade');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
