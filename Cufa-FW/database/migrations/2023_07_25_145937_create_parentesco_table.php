@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('parentesco', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->integer('id')->primary()->unsigned();
             $table->string('descricao');
             $table->timestamps();
         });

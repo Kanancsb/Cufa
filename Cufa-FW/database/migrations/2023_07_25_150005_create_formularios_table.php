@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('formularios', function (Blueprint $table) {
-            $table->integer('cpf')->primary();
+            $table->integer('cpf')->primary()->unsigned();
             $table->string('rg');
             $table->string('nome');
             $table->string('sobrenome');
             $table->string('sexo');
             $table->string('estadoCivil');
             $table->date('dataNascimentoEntrevistado');
-            $table->integer('escolaridadeEntrevistado');
+            $table->integer('escolaridadeEntrevistado')->unsigned();
             $table->foreign('escolaridadeEntrevistado')->references('id')->on('escolaridade');
             $table->string('naturalidade');
             $table->string('endereco');
