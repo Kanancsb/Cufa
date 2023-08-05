@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('formularios', function (Blueprint $table) {
             $table->integer('cpf')->primary();
             $table->string('rg');
-            $table->timestamps();
             $table->string('nome');
             $table->string('sobrenome');
             $table->string('sexo');
