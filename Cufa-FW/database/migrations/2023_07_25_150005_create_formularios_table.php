@@ -30,7 +30,7 @@ return new class extends Migration
             $table->integer('telefone');
             $table->integer('celular');
             $table->string('email');
-            $table->float('rendaMensalBrutaEntrevistado');
+            $table->decimal('rendaMensalBrutaEntrevistado', 10, 2);
         });
     }
 

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->foreign('parentesco_id')->references('id')->on('parentesco');
             $table->date('dataNascimentoFamiliar');
             $table->decimal('rendaMensalBrutaFamiliar', 10, 2);
-            $table->integer('profissao_id')->unsigned();
+            $table->integer('profissao_id');
             $table->foreign('profissao_id')->references('id')->on('profissao');
-            $table->integer('escolaridadeFamiliar')->unsigned();
+            $table->integer('escolaridadeFamiliar');
             $table->foreign('escolaridadeFamiliar')->references('id')->on('escolaridade');
             $table->timestamps();
         });
